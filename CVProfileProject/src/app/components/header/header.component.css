@@ -1,3 +1,59 @@
-div {
-  background-color: #cdcffe;
+.toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #1976d2;
+  color: white;
+  font-weight: 600;
+}
+
+.toolbar img {
+  margin: 0 16px;
+}
+
+.toolbar #whatssap-logo {
+  height: 40px;
+  width: 35px;
+  margin: 0 8px;
+  float: right;
+  border-radius: 100%;
+}
+
+.toolbar #github-logo {
+  height: 40px;
+  width: 35px;
+  margin: 0 8px;
+  float: right;
+  border-radius: 100%;
+}
+
+.toolbar #mail-logo {
+  height: 40px;
+  width: 35px;
+  margin: 0 8px;
+  float: right;
+  border-radius: 100%;
+}
+
+.toolbar #linked-logo {
+  height: 40px;
+  width: 35px;
+  margin: 0 8px;
+  float: right;
+  border-radius: 100%;
+}
+
+.toolbar #mail-logo:hover,
+.toolbar #linked-logo:hover,
+.toolbar #github-logo:hover,
+.toolbar #whatssap-logo:hover {
+  opacity: 0.8;
+}
+
+.spacer {
+  flex: 1;
 }
