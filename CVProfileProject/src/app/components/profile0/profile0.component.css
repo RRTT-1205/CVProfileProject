@@ -1,0 +1,14 @@
+#editarexp1 {
+  width: 30px;
+  height: 30px;
+  float: right;
+  padding-right: 10px;
+}
+
+.form-control {
+  display: inline-block;
+  margin-left: 15px;
+  width: 650px;
+  height: 40px;
+  background-color: #dcddfa;
+}

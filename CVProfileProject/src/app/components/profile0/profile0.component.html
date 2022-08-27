@@ -1,0 +1,29 @@
+
+<div class="row">
+  <!--Eliminar-->
+<button *ngIf="selectedEmployee.id !==0" class="btn btn.danger" (click)="delete()" type="button"
+  class="rounded float-end">
+  <img src="https://ayudawp.com/wp-content/uploads/2018/04/borrar-plugins-wordpress.png" style="float:lef"
+    id="editarexp1"></button>
+<!--Agregar o Editar-->
+<button (click)="addOrEdit()" type="button" class="rounded float-end" width="" height="">
+  <img
+    src="https://img2.freepng.es/20180319/uje/kisspng-computer-icons-scalable-vector-graphics-apple-icon-edit-png-icon-blue-pencil-5ab065d3a79673.8929716715215098436865.jpg"
+    style="float:right" id="editarexp1"></button>
+
+<h1 class="title mt-1">
+  <b *ngFor="let employee of employeeArray" class="list-group-item list-group-item-action"
+    (click)="openForEdit(employee)" [class.active]="employee == selectedEmployee">
+    {{ employee.name}}</b>
+</h1>
+<h1 class="title mt-1">
+  <b *ngFor="let employee of employeeArray" class="list-group-item list-group-item-action"
+    (click)="openForEdit(employee)" [class.active]="employee == selectedEmployee">{{ employee.profession}}</b>
+</h1>
+
+  <div class="form-group">
+    <input type="text" [(ngModel)]="selectedEmployee.name" class="form-control" placeholder="Inserte nombre">
+    <input type="text" [(ngModel)]="selectedEmployee.profession" class="form-control" placeholder="Inserte profesión">
+  </div>
+
+
