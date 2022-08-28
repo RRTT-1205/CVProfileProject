@@ -1,0 +1,80 @@
+<div class="card-body">
+  <div class="card-title">
+    <h2>Educación</h2>
+  </div>
+
+  <img
+    src="https://media-exp1.licdn.com/dms/image/C510BAQFxYj8Wk5aVvQ/company-logo_100_100/0/1586341470273?e=1668643200&v=beta&t=Lwd53KLQqzXtCSnZOMJ8xguLCORktXAWNL8Ol5M41qo"
+    class="rounded float-start">
+  <span>
+    <!--Eliminar-->
+    <button *ngIf="selectedEduc.id !==0" (click)="delete()" type="button" class=" float-end">
+      <img src="https://ayudawp.com/wp-content/uploads/2018/04/borrar-plugins-wordpress.png"
+        id="editarexp1"></button>
+    <!--Agregar o Editar-->
+    <button (click)="addOrEdit()" type="button" class="rounded float-end">
+      <img
+        src="https://img2.freepng.es/20180319/uje/kisspng-computer-icons-scalable-vector-graphics-apple-icon-edit-png-icon-blue-pencil-5ab065d3a79673.8929716715215098436865.jpg"
+        id="editarexp1"></button>
+  </span>
+  <div class="row">
+    <b *ngFor="let employee of educArray" class="" (click)="openForEdit(employee)"
+      [class.active]="employee == selectedEduc">
+      <span class="badge badge-primary"></span>{{ employee.institution }} {{ employee.fecha }}</b>
+    <p *ngFor="let employee of educArray" class="" (click)="openForEdit(employee)"
+      [class.active]="employee == selectedEduc">
+      <span class="badge badge-primary"></span> Titulo: {{ employee.title }}
+    </p>
+    <p *ngFor="let employee of educArray" class="" (click)="openForEdit(employee)"
+      [class.active]="employee == selectedEduc">
+      <span class="badge badge-primary"></span> Titulo: {{ employee.description }}
+    </p>
+  </div>
+  <div class="form-group">
+    <input type="text" [(ngModel)]="selectedEduc.institution" class="d" placeholder="Institucion">
+    <input type="text" [(ngModel)]="selectedEduc.fecha" class="d" placeholder="Fecha">
+    <input type="text" [(ngModel)]="selectedEduc.title" class="d" placeholder="Titulo">
+    <input type="text" [(ngModel)]="selectedEduc.description" class="d" placeholder="Descripción">
+  </div>
+
+  <div>
+    <h2>Licencias y certificaciones</h2>
+  </div>
+  <div>
+    <img
+      src="https://media-exp1.licdn.com/dms/image/C4E0BAQHhDPmHBm3pCg/company-logo_100_100/0/1563979482487?e=1668643200&v=beta&t=L4owGicRGy6lsbkPNldyrIyvNQjF0z5W_o4kffG7qcQ"
+      class="rounded float-start">
+    <span>
+      <!--Eliminar-->
+      <button *ngIf="selectedCertif.id !==0" class="btn btn.danger" (click)="delete()" type="button"
+        class="rounded float-end">
+        <img src="https://ayudawp.com/wp-content/uploads/2018/04/borrar-plugins-wordpress.png"
+          id="editarexp1"></button>
+      <!--Agregar o Editar-->
+      <button (click)="addOrEdit2()" type="button" class="rounded float-end" width="" height="">
+        <img
+          src="https://img2.freepng.es/20180319/uje/kisspng-computer-icons-scalable-vector-graphics-apple-icon-edit-png-icon-blue-pencil-5ab065d3a79673.8929716715215098436865.jpg"
+          style="float:right" id="editarexp1"></button>
+    </span>
+    <div class="row">
+      <b *ngFor="let employee of certifArray" class="" (click)="openForEdit2(employee)"
+        [class.active]="employee == selectedCertif">
+        <span class="badge badge-primary"></span>{{ employee.institution }} {{ employee.fecha }}</b>
+      <p *ngFor="let employee of certifArray" class="" (click)="openForEdit2(employee)"
+        [class.active]="employee == selectedCertif">
+        <span class="badge badge-primary"></span> Titulo: {{ employee.title }}
+      </p>
+      <p *ngFor="let employee of certifArray" class="" (click)="openForEdit2(employee)"
+        [class.active]="employee == selectedCertif">
+        <span class="badge badge-primary"></span> Titulo: {{ employee.description }}
+      </p>
+    </div>
+    <div class="form-group">
+      <input type="text" [(ngModel)]="selectedCertif.institution" class="d" placeholder="Institucion">
+      <input type="text" [(ngModel)]="selectedCertif.fecha" class="d" placeholder="Fecha">
+      <input type="text" [(ngModel)]="selectedCertif.title" class="d" placeholder="Titulo">
+      <input type="text" [(ngModel)]="selectedCertif.description" class="d" placeholder="Descripción">
+    </div>
+  </div>
+</div>
+

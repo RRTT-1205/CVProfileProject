@@ -12,6 +12,9 @@ import { PhotoComponent } from './components/photo/photo.component';
 import { Profile0Component } from './components/profile0/profile0.component';
 import { Profile1Component } from './components/profile1/profile1.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
+import { EducCertfComponent } from './components/educ-certf/educ-certf.component';
+import { SkillsComponent } from './components/skills/skills.component';
+import { ProyectosComponent } from './components/proyectos/proyectos.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { ExperienciaComponent } from './components/experiencia/experiencia.compo
     PhotoComponent,
     Profile0Component,
     Profile1Component,
-    ExperienciaComponent
+    ExperienciaComponent,
+    EducCertfComponent,
+    SkillsComponent,
+    ProyectosComponent
   ],
   imports: [
     BrowserModule,

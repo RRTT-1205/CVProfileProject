@@ -1,0 +1,49 @@
+<div class="card mt-4">
+  <div class="card-body">
+    <div class="row">
+      <div class="card-title">
+        <h2>Proyectos</h2>
+        <b>Portfolio Web.</b>
+        <b><time>2022</time></b>
+      </div>
+    </div>
+    <div>
+
+      <b>Descripción: </b>
+    </div>
+    <div class="">
+      <div class="row">
+        <div class="col-md-8 mt-1">
+          <ul class="list-group">
+            <b>
+              <li *ngFor="let employee of descriptionArray" class="list-group-item list-group-item-action"
+                (click)="openForEdit(employee)" [class.active]="employee == selectedDescription">
+                <span class="badge-primary">{{employee.id}}.</span> {{employee.description}}
+              </li>
+            </b>
+          </ul>
+          <div class="card-mt-4">
+            <div class="card-body">
+              <div class="card-title">
+                Inserta la descripción
+              </div>
+              <div class="form-group">
+                <input type="text" [(ngModel)]="selectedDescription.description"
+                  placeholder="Inserte la nueva descripción" class="form-control">
+              </div>
+              <button (click)="addOrEdit()" class="btn btn-primary">
+                Enviar
+              </button>
+              <button *ngIf="selectedDescription.id !==0" class="btn btn-danger" (click)="delete()" type="button"
+                class="rounded float-end">
+                <img src="https://ayudawp.com/wp-content/uploads/2018/04/borrar-plugins-wordpress.png"
+                  id="editarexp1">
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <img width="300" alt=""
+            src="https://static.vecteezy.com/system/resources/previews/005/137/193/original/craft-lead-concept-icon-writing-cv-abstract-idea-thin-line-illustration-curriculum-vitae-first-step-of-job-application-job-hunting-isolated-outline-color-drawing-editable-stroke-vector.jpg">
+        </div>
+      </div>

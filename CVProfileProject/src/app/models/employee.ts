@@ -11,7 +11,11 @@ export class Acercade {
 
 export class Description {
   id: number = 0;
-  description: string | undefined;
+  description: string| undefined;
+  }
+export class Project {
+  projectname: string| undefined;
+  fecha: number| undefined;
   }
 
   export class Experiencia1 {
@@ -39,4 +43,20 @@ export class Description {
   cargo: string| undefined;
   fecha: string| undefined;
   funciones: string| undefined;
+  }
+
+   export class Educ {
+  id: number = 0;
+  institution: string| undefined;
+  fecha: string| undefined;
+  title: string| undefined;
+  description: string| undefined;
+  }
+
+  export class Certif {
+  id: number = 0;
+  institution: string| undefined;
+  fecha: string| undefined;
+  title: string| undefined;
+  description: string| undefined;
   }

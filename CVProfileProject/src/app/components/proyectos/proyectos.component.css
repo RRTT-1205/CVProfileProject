@@ -1,0 +1,14 @@
+#editarexp1 {
+  width: 30px;
+  height: 30px;
+  float: right;
+  }
+
+.form-control {
+  background-color: #dcddfa;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
