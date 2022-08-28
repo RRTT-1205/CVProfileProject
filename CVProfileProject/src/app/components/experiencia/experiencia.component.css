@@ -1,0 +1,42 @@
+@media(min-width:200px) {
+  #logexpcws {
+    width: 80px;
+    height: 45px;
+    float: left;
+    padding-right: 10px;
+  }
+
+  #logexprui {
+    width: 80px;
+    height: 45px;
+    float: left;
+    padding-right: 10px;
+  }
+
+  #logexpkpmg {
+    width: 80px;
+    height: 45px;
+    float: left;
+    padding-right: 10px;
+  }
+
+  #editarexp1 {
+    width: 30px;
+    height: 30px;
+    float: right;
+    padding-right: 10px;
+  }
+
+  .d {
+    display: inline-block;
+    width: 230px;
+    height: 40px;
+    background-color: #dcddfa;
+  }
+
+  .form-control {
+    display: inline-block;
+    background-color: #dcddfa;
+  }
+}
+

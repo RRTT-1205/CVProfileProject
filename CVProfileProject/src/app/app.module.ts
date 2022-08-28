@@ -10,6 +10,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { ImgFondoHeaderComponent } from './components/img-fondo-header/img-fondo-header.component';
 import { PhotoComponent } from './components/photo/photo.component';
 import { Profile0Component } from './components/profile0/profile0.component';
+import { Profile1Component } from './components/profile1/profile1.component';
+import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { Profile0Component } from './components/profile0/profile0.component';
     HeaderComponent,
     ImgFondoHeaderComponent,
     PhotoComponent,
-    Profile0Component
+    Profile0Component,
+    Profile1Component,
+    ExperienciaComponent
   ],
   imports: [
     BrowserModule,

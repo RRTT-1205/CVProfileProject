@@ -1,15 +1,12 @@
+#text1 {
+  text-align: center;
+}
+
 #editarexp1 {
   width: 30px;
   height: 30px;
   }
 
-
-
-
 .form-control {
-  display: inline-block;
-  margin-left: 15px;
-  width: 650px;
-  height: 40px;
   background-color: #dcddfa;
 }

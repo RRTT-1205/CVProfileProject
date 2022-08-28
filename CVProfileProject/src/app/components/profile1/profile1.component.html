@@ -1,0 +1,23 @@
+<div>
+  <div class="card-body">
+    <div class="card-title">
+      <!--Eliminar-->
+      <button *ngIf="selectedAcercade.id !==0" class="btn btn.danger" (click)="delete()" type="button"
+        class="rounded float-end">
+        <img src="https://ayudawp.com/wp-content/uploads/2018/04/borrar-plugins-wordpress.png" style="float:lef"
+          id="editarexp1"></button>
+      <!--Agregar o Editar-->
+      <button (click)="addOrEdit()" type="button" class="rounded float-end" width="" height="">
+        <img
+          src="https://img2.freepng.es/20180319/uje/kisspng-computer-icons-scalable-vector-graphics-apple-icon-edit-png-icon-blue-pencil-5ab065d3a79673.8929716715215098436865.jpg"
+          style="float:right" id="editarexp1"></button>
+      <h2>Acerca de</h2>
+
+<!--Detalle-->
+<p class="row" id="text1">
+  <b *ngFor="let employee of acercadeArray" class="list-group-item list-group-item-action"
+    (click)="openForEdit(employee)" [class.active]="employee == selectedAcercade">
+    <span class="badge badge-"></span>{{ employee.detalle }}
+    <div class="form-group">
+      <input type="text" [(ngModel)]="selectedAcercade.detalle" class="form-control" placeholder="Inserte el Detalle">
+    </div>
