@@ -136,5 +136,8 @@ circle {
 
 .row {
   padding: 20px;
+}
 
+div {
+  background-color: #cdcffe;
 }

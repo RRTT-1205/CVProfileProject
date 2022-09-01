@@ -4,13 +4,17 @@
   border: 1px solid;
   }
 
-
-
-
 .form-control {
   display: inline-block;
   margin-left: 15px;
   width: 650px;
   height: 40px;
   background-color: #dcddfa;
+}
+
+b {
+  background-color: #cdcffe;
+}
+div {
+  background-color: #cdcffe;
 }
