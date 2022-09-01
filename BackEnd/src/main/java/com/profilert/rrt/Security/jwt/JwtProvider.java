@@ -23,16 +23,16 @@ public class JwtProvider {
     private String secret;
     @Value("${jwt.expiration}")
     private int expiration;
-    
+
     public String generateToken(Authentication authentication) {
         UsuarioPrincipal usuarioPrincipal = (UsuarioPrincipal) authentication.getPrincipal();
         return Jwts.builder().setSubject(usuarioPrincipal.getUsername())
                 .setIssuedAt(new Date())
-                .setExpiration(new Date(new Date().getTime()+expiration*1000))
+                .setExpiration(new Date(new Date().getTime() + expiration * 1000))
                 .signWith(SignatureAlgorithm.ES512, secret)
                 .compact();
     }
-    
+
     public String getNombreUSuarioFromToken(String token) {
         return Jwts.parser().setSigningKey(secret).parseClaimsJws(token).getBody().getSubject();
     }
@@ -41,7 +41,7 @@ public class JwtProvider {
         try {
             Jwts.parser().setSigningKey(secret).parseClaimsJws(token);
             return true;
-        }catch (MalformedJwtException e) {
+        } catch (MalformedJwtException e) {
             logger.error("Token mal formado");
         } catch (UnsupportedJwtException e) {
             logger.error("Token no soportado");

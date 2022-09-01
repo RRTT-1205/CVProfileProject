@@ -1,4 +1,3 @@
-
 package com.profilert.rrt.Security.Entity;
 
 import java.util.HashSet;
@@ -13,10 +12,10 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.validation.constraints.NotNull;
- 
 
 @Entity
 public class Usuario {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -24,15 +23,15 @@ public class Usuario {
     private String nombre;
     @NotNull
     @Column(unique = true)
-    private  String nombreUsuario;
+    private String nombreUsuario;
     @NotNull
     private String email;
     @NotNull
-    private  String password;
+    private String password;
     @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(name = "usuario_rol", joinColumns = @JoinColumn(name ="usuario_id"),
+    @JoinTable(name = "usuario_rol", joinColumns = @JoinColumn(name = "usuario_id"),
             inverseJoinColumns = @JoinColumn(name = "rol_id"))
-    private  Set<Rol> roles = new HashSet<>();
+    private Set<Rol> roles = new HashSet<>();
 
     public Usuario() {
     }
@@ -91,5 +90,5 @@ public class Usuario {
     public void setRoles(Set<Rol> roles) {
         this.roles = roles;
     }
-     
+
 }

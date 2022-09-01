@@ -1,9 +1,8 @@
-
 package com.profilert.rrt.Security.Controller;
 
-
 public class Mensaje {
- private String mensaje;
+
+    private String mensaje;
 
     public Mensaje() {
     }
@@ -19,7 +18,5 @@ public class Mensaje {
     public void setMensaje(String mensaje) {
         this.mensaje = mensaje;
     }
- 
-    
- 
+
 }

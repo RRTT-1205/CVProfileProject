@@ -1,4 +1,3 @@
-
 package com.profilert.rrt.Security.Repository;
 
 import com.profilert.rrt.Security.Entity.Usuario;
@@ -8,8 +7,10 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface iUsuarioRepository extends JpaRepository<Usuario, Integer> {
-    Optional<Usuario> findByNombreUsuario (String nombreUsuario);
-    
-    boolean existsByNombreUsuario (String nombreUsuario);
-    boolean existsByEmail (String email);
+
+    Optional<Usuario> findByNombreUsuario(String nombreUsuario);
+
+    boolean existsByNombreUsuario(String nombreUsuario);
+
+    boolean existsByEmail(String email);
 }

@@ -11,12 +11,13 @@ import javax.validation.constraints.NotNull;
 
 @Entity
 public class Rol {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;                         
+    private int id;
     @NotNull
     @Enumerated(EnumType.STRING)
-    private RolNombre rolNombre;    
+    private RolNombre rolNombre;
 
     public Rol() {
     }
@@ -41,7 +42,3 @@ public class Rol {
         this.rolNombre = rolNombre;
     }
 }
-    
-   
-    
-    

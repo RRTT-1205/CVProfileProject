@@ -1,10 +1,9 @@
-
 package com.profilert.rrt.Security.Dto;
 
 import javax.validation.constraints.NotBlank;
 
-
 public class LoginUsuario {
+
     @NotBlank
     private String nombreUsuario;
     @NotBlank
@@ -25,6 +24,5 @@ public class LoginUsuario {
     public void setPassword(String password) {
         this.password = password;
     }
-    
-     
+
 }
