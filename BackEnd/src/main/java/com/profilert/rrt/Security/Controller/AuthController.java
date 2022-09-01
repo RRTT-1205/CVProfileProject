@@ -44,7 +44,7 @@ public class AuthController {
     @Autowired
     JwtProvider jwtProvider;
 
-    @PostMapping("/nuevo")
+    @PostMapping("/auth/nuevo")
     public ResponseEntity<?> nuevo(@Valid @RequestBody NuevoUsuario nuevoUsuario, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return new ResponseEntity(new Mensaje("Campos invalidos"), HttpStatus.BAD_REQUEST);
@@ -67,6 +67,7 @@ public class AuthController {
         if (nuevoUsuario.getRoles().contains("admin")) {
             roles.add(rolService.getByRolNombre(RolNombre.ROLE_ADMIN).get());
         }
+
         usuario.setRoles(roles);
         usuarioService.save(usuario);
 
