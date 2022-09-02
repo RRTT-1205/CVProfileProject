@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginUsuario } from 'src/app/models/login-usuario';
 import { TokenService } from 'src/app/services/token.service';
 import { AuthService } from 'src/app/services/auth.service';
 import { Router } from '@angular/router';
@@ -22,7 +21,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
 
-    
+
   }
 
 
