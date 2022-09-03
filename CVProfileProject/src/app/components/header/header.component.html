@@ -29,7 +29,8 @@
 </span>
   <div>
   <span class="wrap">
-    <button class="button" (click)="login()">Login</button>
+    <button class="button" (click)="login()" *ngIf="!isLogged">Login</button>
+    <button class="button" (click)="onLogOut()" *ngIf="isLogged">Sign out</button>
   </span>
   </div>
 
