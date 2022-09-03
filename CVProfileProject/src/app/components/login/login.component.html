@@ -20,9 +20,11 @@
     <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
     <fieldset class="clearfix">
 
-      <p><span class="fa fa-user"></span><input type="text" id="nombreUsuario" name="nombreUsuario" Placeholder="Usuario" [(ngModel)]="nombreUsuario" required></p>
-      <!-- JS because of IE support; better: placeholder="Username" -->
-      <p><span class="fa fa-lock"></span><input type="password" id="password" name="password" Placeholder="Password" [(ngModel)]="password" required></p>
+      <p><span class="fa fa-user"></span>
+        <input type="text" id="nombreUsuario" name="nombreUsuario" Placeholder="Usuario" [(ngModel)]="nombreUsuario" name="nombreUsuario" required></p>
+        <!-- JS because of IE support; better: placeholder="Username" -->
+      <p><span class="fa fa-lock"></span>
+        <input type="password" id="password" name="password" Placeholder="Password" [(ngModel)]="password" name="password" required></p>
       <!-- JS because of IE support; better: placeholder="Password" -->
 
    <div>
