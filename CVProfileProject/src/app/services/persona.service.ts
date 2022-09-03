@@ -8,7 +8,7 @@ import {Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class PersonaService {
-  URL = 'http://';
+  URL = 'https://';
 
 
   constructor(private http: HttpClient) { }
