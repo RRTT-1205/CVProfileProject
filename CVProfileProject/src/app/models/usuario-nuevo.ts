@@ -3,5 +3,5 @@ export class UsuarioNuevo {
   nombreUsuario!: string;
   email!: string;
   password!: string;
-  authorities!: string;
+  authorities!: string[];
 }
