@@ -161,13 +161,5 @@ button:focus::after {
     margin: 0.2em;
   }
 
-    .wrap {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .wrap img {
-      margin: 0.2em;
-    }
+    
 }
