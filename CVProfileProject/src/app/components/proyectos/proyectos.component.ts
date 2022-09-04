@@ -34,6 +34,9 @@ addOrEdit(){
 openForEdit(description: Description){
   this.selectedDescription = description;
 }
+openForEdit2(project: Project){
+  this.selectedProject = project;
+}
 
 delete(){
   if(confirm("Estas seguro de eliminar la  descripción?")){

@@ -1,10 +1,13 @@
 <div class="card mt-4">
-  <div class="card-body">
-    <div class="row">
-      <div class="card-title">
-        <h2>Proyectos</h2>
-        <b>Portfolio Web.</b>
-        <b><time>2022</time></b>
+<div class="card-body">
+  <div class="row">
+    <div class="card-title">
+      <h2>Proyectos</h2>
+      <b *ngFor="let employee of projectArray" class="list-group-item list-group-item-action" (click)="openForEdit2(employee)"
+        [class.active]="employee == selectedProject">
+        {{ employee.projectname}}</b>
+        <b *ngFor="let employee of projectArray" class="list-group-item list-group-item-action" (click)="openForEdit2(employee)"
+          [class.active]="employee == selectedProject">{{ employee.fecha}}</b>
       </div>
     </div>
     <div>
@@ -43,7 +46,7 @@
           </div>
         </div>
         <div class="col-md-3">
-          <img width="300" id="imgproyect" padding-left="20px"
+          <img width="300" class="imgproyect"
             src="https://static.vecteezy.com/system/resources/previews/005/137/193/original/craft-lead-concept-icon-writing-cv-abstract-idea-thin-line-illustration-curriculum-vitae-first-step-of-job-application-job-hunting-isolated-outline-color-drawing-editable-stroke-vector.jpg">
         </div>
       </div>

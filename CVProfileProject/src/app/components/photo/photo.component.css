@@ -1,5 +1,5 @@
 /*Foto*/
-@media(min-width:376px) {
+@media(min-width:576px) {
 
   img {
     max-width: 100%;
@@ -16,11 +16,11 @@
     padding: 0.5px;
     padding-left: 10px;
     height: 205px;
-    width: 400px;
+    width: 205px;
 
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 575px) {
   #foto {
     position: absolute;
       width: 140px;

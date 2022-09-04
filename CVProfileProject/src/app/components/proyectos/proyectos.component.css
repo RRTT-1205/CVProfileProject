@@ -9,11 +9,9 @@
   background-color: #dcddfa;
 }
 
-#imgproyect{
+.imgproyect{
   max-width: 100%;
   max-height: 100%;
-  top: 50%;
-  left: 50%;
   filter: saturate(180%);
   border-radius: 35%;
     -webkit-border-radius: 35%;
@@ -31,5 +29,8 @@ li {
   background-color: #cdcffe;
 }
 div {
+  background-color: #cdcffe;
+}
+b {
   background-color: #cdcffe;
 }
