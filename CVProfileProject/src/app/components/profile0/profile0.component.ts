@@ -1,6 +1,7 @@
+import { persona } from './../../models/persona';
 import { Component, OnInit } from '@angular/core';
 import {Employee} from 'src/app/models/employee';
-
+import { PersonaService } from 'src/app/services/persona.service';
 
 @Component({
   selector: 'app-profile0',
@@ -32,13 +33,12 @@ delete(){
   this.selectedEmployee = new Employee();
 }
 }
-
-
-
-  constructor() { }
+persona: persona = new persona("","","");
+ constructor(public personaService: PersonaService) { }
 
   ngOnInit(): void {
-
+    this.personaService.getPersona().subscribe(data => {this.persona = data})
   }
+
 }
 

@@ -13,7 +13,7 @@
 <h1 class="title mt-5">
   <b *ngFor="let employee of employeeArray" class="list-group-item list-group-item-action"
     (click)="openForEdit(employee)" [class.active]="employee == selectedEmployee">
-    {{ employee.name}}
+    {{ persona.nombre}}
 
   </b>
   <b *ngFor="let employee of employeeArray" class="list-group-item list-group-item-action"
