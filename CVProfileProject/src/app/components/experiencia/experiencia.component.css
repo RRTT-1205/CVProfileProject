@@ -1,21 +1,21 @@
 @media(min-width:200px) {
   #logexpcws {
-    width: 80px;
-    height: 45px;
+    width: 100px;
+    height: 105px;
     float: left;
     padding-right: 10px;
   }
 
   #logexprui {
-    width: 80px;
-    height: 45px;
+    width: 100px;
+    height: 85px;
     float: left;
     padding-right: 10px;
   }
 
   #logexpkpmg {
-    width: 80px;
-    height: 45px;
+    width: 100px;
+    height: 80px;
     float: left;
     padding-right: 10px;
   }

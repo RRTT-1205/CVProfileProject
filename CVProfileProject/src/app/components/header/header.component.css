@@ -158,8 +158,6 @@ button:focus::after {
   }
 
   .toolbar img {
-    margin: 0.2em;
+    margin: -0.1em;
   }
-
-    
 }

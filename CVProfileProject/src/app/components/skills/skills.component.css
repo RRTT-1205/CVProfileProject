@@ -1,3 +1,4 @@
+@media(min-width:576px) {
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +8,7 @@
   width: 260px;
   height: 160px;
   position: relative;
-  margin-left: 60px;
+  margin-left: 230px;
 }
 
 .outer {
@@ -16,7 +17,7 @@
   border-radius: 50%;
   padding: 20px;
   box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
-    -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+    -6px -6px 10px -1px rgba(205, 23, 221, 0.501);
 }
 
 .inner {
@@ -136,8 +137,150 @@ circle {
 
 .row {
   padding: 20px;
-}
+}}
 
 div {
   background-color: #cdcffe;
 }
+
+@media (max-width: 575px) {
+  * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    .skill {
+      width: 260px;
+      height: 160px;
+      position: relative;
+      margin-left: 94px;
+    }
+
+    .outer {
+      height: 160px;
+      width: 160px;
+      border-radius: 50%;
+      padding: 20px;
+      box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+        -6px -6px 10px -1px rgba(205, 23, 221, 0.501);
+    }
+
+    .inner {
+      height: 120px;
+      width: 120px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+        inset -4px -4px 6px -1px rgba(0, 0, 255, 0.7),
+        -0.5px -0.5px 0px rgba(0, 0, 255, 1),
+        0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+        0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+    }
+
+    #number {
+      font-weight: 700;
+      color: #555;
+    }
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    circle {
+      fill: none;
+      stroke: url(#GradientColor);
+      stroke-width: 20px;
+      stroke-dasharray: 472;
+      stroke-dashoffset: 472;
+      animation: anim 1s linear forwards;
+    }
+
+    @keyframes anim {
+      100% {
+        stroke-dashoffset: 306;
+      }
+    }
+
+    .circle2 {
+      fill: none;
+      stroke: url(#GradientColor);
+      stroke-width: 20px;
+      stroke-dasharray: 472;
+      stroke-dashoffset: 472;
+      animation: anim2 2s linear forwards;
+    }
+
+    @keyframes anim2 {
+      100% {
+        stroke-dashoffset: 259;
+      }
+    }
+
+    .circle3 {
+      fill: none;
+      stroke: url(#GradientColor);
+      stroke-width: 20px;
+      stroke-dasharray: 472;
+      stroke-dashoffset: 472;
+      animation: anim3 2s linear forwards;
+    }
+
+    @keyframes anim3 {
+      100% {
+        stroke-dashoffset: 283;
+      }
+    }
+
+    .circle4 {
+      fill: none;
+      stroke: url(#GradientColor);
+      stroke-width: 20px;
+      stroke-dasharray: 472;
+      stroke-dashoffset: 472;
+      animation: anim4 2s linear forwards;
+    }
+
+    @keyframes anim4 {
+      100% {
+        stroke-dashoffset: 60;
+      }
+    }
+
+    .circle5 {
+      fill: none;
+      stroke: url(#GradientColor);
+      stroke-width: 20px;
+      stroke-dasharray: 472;
+      stroke-dashoffset: 472;
+      animation: anim5 2s linear forwards;
+    }
+
+    @keyframes anim5 {
+      100% {
+        stroke-dashoffset: 306;
+      }
+    }
+
+    .circle6 {
+      fill: none;
+      stroke: url(#GradientColor);
+      stroke-width: 20px;
+      stroke-dasharray: 472;
+      stroke-dashoffset: 472;
+      animation: anim6 2s linear forwards;
+    }
+
+    @keyframes anim6 {
+      100% {
+        stroke-dashoffset: 306;
+      }
+    }
+
+    .row {
+      padding: 20px;
+    }
+  }
