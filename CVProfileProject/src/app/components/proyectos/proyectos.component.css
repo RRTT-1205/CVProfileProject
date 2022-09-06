@@ -2,8 +2,7 @@
   width: 30px;
   height: 30px;
   float: right;
-  border: 1px solid;
-    }
+  }
 
 .form-control {
   background-color: #dcddfa;
@@ -11,8 +10,8 @@
 
 @media(min-width:576px) {
 .imgproyect{
-  width:350px;
-  margin-left:160px;
+  width:400px;
+  height: 350px;
   max-width: 100%;
   max-height: 100%;
   filter: saturate(180%);
@@ -24,7 +23,60 @@
 
 .fourth:hover {
   background-position: 0;
-}}
+}
+.cards1 {
+  display: flex;
+  width: 130%;
+  padding-left: 1px;
+}
+
+.card2 {
+  background: rgb(0, 114, 255);
+  background: linear-gradient(90deg,
+      rgba(0, 114, 255, 1) 1%,
+      rgba(33, 25, 173, 1) 100%);
+  color: white;
+  width: 300px;
+  height: 350px;
+  border-radius: 10px;
+  padding: 30px;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: -3px 0 10px rgba(0, 0, 0, 0.3), -4px 0 10px rgba(0, 0, 0, 0.2),
+    -5px 0 10px rgba(0, 0, 0, 0.1);
+
+  transition: all 0.3s ease;
+}
+
+.card2:hover {
+  margin-right: 80px;
+  transform: rotate(3deg) translateY(-15px);
+}
+
+.card2 .header {
+  flex: 1;
+}
+
+.card2 .header .date {
+  padding: 10px 0;
+}
+
+.card2 .header .title {
+  font-size: 28px;
+}
+
+card2[class*="element"] {
+  margin-left: -100px;
+}
+
+.element-1:hover,
+.element-2:hover {
+  margin-left: -130px;
+}
+}
 
 li {
   background-color: #cdcffe;
@@ -37,8 +89,7 @@ b {
 }
 @media(max-width:575px) {
   .imgproyect {
-    width: 220px;
-    margin-left: 60px;
+    width: 65px;
     filter: saturate(180%);
     border-radius: 35%;
     -webkit-border-radius: 35%;
@@ -49,4 +100,60 @@ b {
   .fourth:hover {
     background-position: 0;
   }
+    .cards1 {
+      display: flex;
+      width: 130%;
+      padding-left: 25px;
+    }
+
+    .card2 {
+      background: rgb(0, 114, 255);
+      background: linear-gradient(90deg,
+          rgba(0, 114, 255, 1) 1%,
+          rgba(33, 25, 173, 1) 100%);
+      color: white;
+      width: 100px;
+      height: 100px;
+      border-radius: 10px;
+      padding: 18px;
+      box-sizing: border-box;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+
+      box-shadow: -3px 0 10px rgba(0, 0, 0, 0.3), -4px 0 10px rgba(0, 0, 0, 0.2),
+        -5px 0 10px rgba(0, 0, 0, 0.1);
+
+      transition: all 0.3s ease;
+    }
+
+    .card2:hover {
+      margin-right: 80px;
+      transform: rotate(3deg) translateY(-15px);
+    }
+
+    .card2 .header {
+      flex: 1;
+    }
+
+    .card2 .header .date {
+      padding: 10px 0;
+    }
+
+    .card2 .header .title {
+      font-size: 28px;
+    }
+
+    card2[class*="element"] {
+      margin-left: -100px;
+    }
+
+    .element-1:hover,
+    .element-2:hover {
+      margin-left: -130px;
+    }
 }
+
+
+
+

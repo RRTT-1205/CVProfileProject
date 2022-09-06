@@ -4,9 +4,7 @@
     width: 30px;
     height: 30px;
     justify-content: center;
-    border: 1px solid;
-
-  }
+    }
     .fourth {
       border-color: blue;
       background-image: -webkit-linear-gradient(45deg, #400ff1 50%, transparent 50%);
