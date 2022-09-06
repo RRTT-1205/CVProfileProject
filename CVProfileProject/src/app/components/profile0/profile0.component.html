@@ -10,18 +10,16 @@
     style="float:right" id="editarexp1"></button>
 
 <h1 class="title mt-5">
-  <b *ngFor="let employee of employeeArray" class="list-group-item list-group-item-action"
-    (click)="openForEdit(employee)" [class.active]="employee == selectedEmployee">
-    {{ employee.name}}
-
+  <b  class="list-group-item">
+    {{ persona.nombre}} {{ persona.apellido}}
   </b>
+
   <b *ngFor="let employee of employeeArray" class="list-group-item list-group-item-action"
     (click)="openForEdit(employee)" [class.active]="employee == selectedEmployee">{{ employee.profession}}</b>
 </h1>
 
 <div class="card-body">
   <div class="form-group; row">
-    <input type="text" [(ngModel)]="selectedEmployee.name" class="form-control" placeholder="Inserte nombre">
     <input type="text" [(ngModel)]="selectedEmployee.profession" class="form-control" placeholder="Inserte profesión">
   </div>
 

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Experiencia1, Experiencia2, Experiencia3 } from 'src/app/models/employee';
+import { Experiencia } from 'src/app/models/experiencia';
+import { SExperienciaService } from 'src/app/services/s-experiencia.service';
+import { TokenService } from 'src/app/services/token.service';
 
 @Component({
   selector: 'app-experiencia',
@@ -7,6 +10,8 @@ import { Experiencia1, Experiencia2, Experiencia3 } from 'src/app/models/employe
   styleUrls: ['./experiencia.component.css']
 })
 export class ExperienciaComponent implements OnInit {
+  
+  expe: Experiencia[] = [];
 
   experiencia1Array: Experiencia1[] = [
   {id:1, empresa: 'Cw Schelp S.A.C.I.', lugar: '"CABA. Argentina".', cargo: 'Especialista Contable/Administrativo.', fecha: 'Ago. 2018 - Actualidad (4 años 1 mes).',
@@ -57,11 +62,30 @@ delete(){
 }
 
 
-  constructor() {
-
-   }
+  constructor(private sExperiencia: SExperienciaService, private tokenService: TokenService) { }
+  isLogged = false;
 
   ngOnInit(): void {
+    this.cargarExperiencia();
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
+  }
+  cargarExperiencia(): void {
+    this.sExperiencia.lista().subscribe(data => { this.expe = data; })
   }
 
+  delete2(id?: number){
+    if(id != undefined){
+      this.sExperiencia.delete(id).subscribe(
+        data => {
+          this.cargarExperiencia();
+        }, err => {
+          alert("No se pudo borrar la experiencia");
+        }
+      )
+    }
+  }
 }
