@@ -12,6 +12,39 @@
     <div class="row">
       <ul class="list-group">
         <li class="list-group-item">
+
+          <!-- Expericia Prueba BD -->
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShY9p8KRp2dsrI_RFi24z1RpDrP8me_4KyAEMtaxWMn2uHgJeOMujgJ0rowtFFYNTVNJg&usqp=CAU"
+            style="float: left" id="logexpcws">
+          <span *ngIf="isLogged">
+            <!--Eliminar-->
+            <button *ngIf="selectedExperiencia1.id !==0" class="btn btn.danger" (click)="delete()" type="button"
+              class="rounded float-end">
+              <img src="https://ayudawp.com/wp-content/uploads/2018/04/borrar-plugins-wordpress.png" style="float:lef"
+                id="editarexp1"></button>
+            <!--Agregar o Editar-->
+            <button  type="button" class="rounded float-end" routerLink="/editexp/{{Experiencia.id}}">
+              <img
+                src="https://img2.freepng.es/20180319/uje/kisspng-computer-icons-scalable-vector-graphics-apple-icon-edit-png-icon-blue-pencil-5ab065d3a79673.8929716715215098436865.jpg"
+                style="float:right" id="editarexp1"></button>
+          </span>
+          <div>
+            <article> <b *ngFor="let Experiencia of expe" class="item-action">
+                {{ Experiencia.nombreE}}</b></article>
+            <article> <b>
+                </b></article>
+            <p *ngFor="let Expericia of expe" class="item-action">
+              {{ Expericia.descripcionE}}</p>
+          </div>
+          <div class="form-group">
+            <input type="text" [(ngModel)]="selectedExperiencia1.empresa" class="d" placeholder="Empresa">
+            <input type="text" [(ngModel)]="selectedExperiencia1.lugar" class="d" placeholder="Lugar de la empresa">
+            <input type="text" [(ngModel)]="selectedExperiencia1.cargo" class="d" placeholder="Cargo">
+            <input type="text" [(ngModel)]="selectedExperiencia1.fecha" class="d" placeholder="Fecha">
+            <input type="text" [(ngModel)]="selectedExperiencia1.funciones" class="form-control" placeholder="Funciones">
+          </div>
+
           <!-- Expericia Nº1 -->
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShY9p8KRp2dsrI_RFi24z1RpDrP8me_4KyAEMtaxWMn2uHgJeOMujgJ0rowtFFYNTVNJg&usqp=CAU"

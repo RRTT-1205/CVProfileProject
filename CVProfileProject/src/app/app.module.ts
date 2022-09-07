@@ -20,6 +20,7 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { NewExperienciaComponent } from './components/experiencia/new-experiencia/new-experiencia.component';
+import { EditExperienciaComponent } from './components/experiencia/edit-experiencia/edit-experiencia.component';
 
 
 
@@ -37,7 +38,8 @@ import { NewExperienciaComponent } from './components/experiencia/new-experienci
     ProyectosComponent,
     HomeComponent,
     LoginComponent,
-    NewExperienciaComponent
+    NewExperienciaComponent,
+    EditExperienciaComponent
   ],
   imports: [
     BrowserModule,
