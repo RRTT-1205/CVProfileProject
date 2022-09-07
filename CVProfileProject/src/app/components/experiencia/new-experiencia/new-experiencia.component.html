@@ -1,20 +1,40 @@
-<div class="container">
-  <div class="row">
-    <div>
+<body>
+  <div class="form-container">
+    <div class="login-container">
+      <h2>Bienvenido al editor de experiencia </h2>
+
+
       <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
-        <div class="form-group">
+        <p>
           <label for="nombreE">Nombre de la empresa</label>
-          <input type="text" class="form-control" id="nombreE" name="nombreE" [(ngModel)]="nombreE" required>
-        </div>
-        <div class="form-group">
-          <label for="descripcionE">Descripcion de la tarea</label>
-          <input type="text" class="form-control" id="descripcionE" name="descripcionE" [(ngModel)]="descripcionE"
-            required>
-        </div>
-        <button class="btn btn-primary">
-          Agregar experiencia
-        </button>
+          <input class="input" type="text"  id="nombreE" name="nombreE" [(ngModel)]="nombreE" required />
+        </p>
+
+        <p>
+          <label for="">Ubicacion de la empresa</label>
+          <input class="input" type="" name="" />
+        </p>
+
+        <p>
+          <label for="">Cargo</label>
+          <input class="input" type="" name="" />
+        </p>
+
+        <p>
+          <label for="descripcionE">Funciones</label>
+          <input class="input" type="text" id="descripcionE" name="descripcionE" [(ngModel)]="descripcionE" required />
+        </p>
+
+        <p>
+          <input class="btn btn-login" type="submit" value="Agregar experiencia" />
+        </p>
+
       </form>
     </div>
+    <div class="welcome-screen-container">
+      <img class="imgproyect"
+        src="https://static.vecteezy.com/system/resources/previews/005/137/214/original/include-softskills-concept-icon-writing-cv-abstract-idea-thin-line-illustration-highlight-communication-skills-in-resume-teamwork-ability-isolated-outline-color-drawing-editable-stroke-vector.jpg">
+
+    </div>
   </div>
-</div>
+</body>
