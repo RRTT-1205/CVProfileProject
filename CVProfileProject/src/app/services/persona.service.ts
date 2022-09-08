@@ -8,7 +8,7 @@ import { persona } from '../models/persona';
 })
 
 export class PersonaService {
-  URL = 'http://localhost:8080/personas/';
+  URL = 'https://backendrrt.herokuapp.com/personas/';
 
   constructor(private http: HttpClient) { }
 
