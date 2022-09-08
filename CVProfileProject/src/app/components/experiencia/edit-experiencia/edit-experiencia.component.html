@@ -1,23 +1,23 @@
-<body *ngIf="expLab">
-  <div class="form-container">
+<body>
+  <div class="form-container" *ngIf="expLab">
     <div class="login-container">
 
       <h2>Bienvenido al editor de experiencia </h2>
 
       <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
         <p>
-          <label for="nombreE">Nombre de la empresa</label>
+          <label for="nombreE">Nombre de la empresa / Rango de Fecha</label>
           <input class="input" type="text" id="nombreE" name="nombreE" [(ngModel)]="expLab.nombreE" required />
         </p>
 
         <p>
-          <label for="">Ubicacion de la empresa</label>
-          <input class="input" type="" name="" />
+          <label for="ubicacionE">Ubicacion de la empresa</label>
+          <input class="input" type="text" id="ubicacionE" name="ubicacionE" [(ngModel)]="expLab.ubicacionE" required />
         </p>
 
         <p>
-          <label for="">Cargo</label>
-          <input class="input" type="" name="" />
+          <label for="cargoE">Cargo</label>
+          <input class="input" type="text" id="cargoE" name="cargoE" [(ngModel)]="expLab.cargoE" required />
         </p>
 
         <p>

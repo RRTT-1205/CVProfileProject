@@ -8,8 +8,8 @@ export class Experiencia {
 
     constructor(nombreE: string, ubicacionE: string, cargoE: string, descripcionE: string){
         this.nombreE = nombreE;
-        this.ubicacionE = descripcionE;
-        this.cargoE = descripcionE;
+        this.ubicacionE = ubicacionE;
+        this.cargoE = cargoE;
         this.descripcionE = descripcionE;
       }
 }
