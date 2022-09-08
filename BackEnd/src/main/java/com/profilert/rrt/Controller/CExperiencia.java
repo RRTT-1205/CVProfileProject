@@ -44,11 +44,11 @@ public class CExperiencia {
 
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> delete(@PathVariable("id") int id) {
-        if (!sExperiencia.existsById(id)) {
+        if (!sExperiencia.existsById(id)) 
             return new ResponseEntity(new Mensaje("no existe"), HttpStatus.NOT_FOUND);
-        }
+        
         sExperiencia.delete(id);
-        return new ResponseEntity(new Mensaje("detalle eliminado"), HttpStatus.OK);
+        return new ResponseEntity(new Mensaje("Experiencia eliminada"), HttpStatus.OK);
     }
 
     @PostMapping("/create")
@@ -60,7 +60,7 @@ public class CExperiencia {
             return new ResponseEntity(new Mensaje("Esa experiencia existe"), HttpStatus.BAD_REQUEST);
         }
 
-        Experiencia experiencia = new Experiencia(dtoexp.getNombreE(), dtoexp.getDescripcionE());
+        Experiencia experiencia = new Experiencia(dtoexp.getNombreE(), dtoexp.getUbicacionE(), dtoexp.getCargoE(), dtoexp.getDescripcionE());
         sExperiencia.save(experiencia);
 
         return new ResponseEntity(new Mensaje("Experiencia agregada"), HttpStatus.OK);
@@ -69,20 +69,22 @@ public class CExperiencia {
     @PutMapping("/update/{id}")
     public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody dtoExperiencia dtoexp) {
         //Validamos si existe el ID
-        if (!sExperiencia.existsById(id)) {
+        if (!sExperiencia.existsById(id)) 
             return new ResponseEntity(new Mensaje("El ID no existe"), HttpStatus.BAD_REQUEST);
-        }
+        
         //Compara nombre de experiencias
-        if (sExperiencia.existsByNombreE(dtoexp.getNombreE()) && sExperiencia.getByNombreE(dtoexp.getNombreE()).get().getId() != id) {
+        if (sExperiencia.existsByNombreE(dtoexp.getNombreE()) && sExperiencia.getByNombreE(dtoexp.getNombreE()).get().getId() != id) 
             return new ResponseEntity(new Mensaje("Esa experiencia ya existe"), HttpStatus.BAD_REQUEST);
-        }
+        
         //No puede estar vacio
-        if (StringUtils.isBlank(dtoexp.getNombreE())) {
+        if (StringUtils.isBlank(dtoexp.getNombreE())) 
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
-        }
+        
 
         Experiencia experiencia = sExperiencia.getOne(id).get();
         experiencia.setNombreE(dtoexp.getNombreE());
+        experiencia.setUbicacionE((dtoexp.getUbicacionE()));
+        experiencia.setCargoE((dtoexp.getCargoE()));
         experiencia.setDescripcionE((dtoexp.getDescripcionE()));
 
         sExperiencia.save(experiencia);

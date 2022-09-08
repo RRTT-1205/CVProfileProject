@@ -13,7 +13,7 @@
       <ul class="list-group">
         <li class="list-group-item">
 
-          <!-- Expericia Prueba BD -->
+          <!-- Experiencia Prueba BD -->
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShY9p8KRp2dsrI_RFi24z1RpDrP8me_4KyAEMtaxWMn2uHgJeOMujgJ0rowtFFYNTVNJg&usqp=CAU"
             style="float: left" id="logexpcws">
@@ -24,28 +24,24 @@
               <img src="https://ayudawp.com/wp-content/uploads/2018/04/borrar-plugins-wordpress.png" style="float:lef"
                 id="editarexp1"></button>
             <!--Agregar o Editar-->
-            <button  type="button" class="rounded float-end" routerLink="/editexp/{{Experiencia.id}}">
+            <button (click)="addOrEdit()" type="button" class="rounded float-end" width="" height="">
               <img
                 src="https://img2.freepng.es/20180319/uje/kisspng-computer-icons-scalable-vector-graphics-apple-icon-edit-png-icon-blue-pencil-5ab065d3a79673.8929716715215098436865.jpg"
                 style="float:right" id="editarexp1"></button>
-          </span>
+            </span>
           <div>
             <article> <b *ngFor="let Experiencia of expe" class="item-action">
-                {{ Experiencia.nombreE}}</b></article>
-            <article> <b>
+                {{ Experiencia.nombreE}}-{{ Experiencia.ubicacionE}}</b></article>
+            <article> <b *ngFor="let Experiencia of expe" class="item-action">
+                {{ Experiencia.cargoE}}
                 </b></article>
-            <p *ngFor="let Expericia of expe" class="item-action">
-              {{ Expericia.descripcionE}}</p>
-          </div>
-          <div class="form-group">
-            <input type="text" [(ngModel)]="selectedExperiencia1.empresa" class="d" placeholder="Empresa">
-            <input type="text" [(ngModel)]="selectedExperiencia1.lugar" class="d" placeholder="Lugar de la empresa">
-            <input type="text" [(ngModel)]="selectedExperiencia1.cargo" class="d" placeholder="Cargo">
-            <input type="text" [(ngModel)]="selectedExperiencia1.fecha" class="d" placeholder="Fecha">
-            <input type="text" [(ngModel)]="selectedExperiencia1.funciones" class="form-control" placeholder="Funciones">
+            <p *ngFor="let Experiencia of expe" class="item-action">
+              {{ Experiencia.descripcionE}}</p>
           </div>
 
-          <!-- Expericia Nº1 -->
+
+          <!-- Experiencia Nº1 -->
+          <div class="card mt-2"></div>
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShY9p8KRp2dsrI_RFi24z1RpDrP8me_4KyAEMtaxWMn2uHgJeOMujgJ0rowtFFYNTVNJg&usqp=CAU"
             style="float: left" id="logexpcws">
@@ -81,7 +77,7 @@
               placeholder="Funciones">
           </div>
 
-          <!-- Expericia Nº2 -->
+          <!-- Experiencia Nº2 -->
           <div class="card mt-2"></div>
           <img
             src="https://scontent.faep9-1.fna.fbcdn.net/v/t1.6435-9/124947746_106372294620536_6614915337696050644_n.jpg?stp=dst-jpg_p526x296&_nc_cat=104&ccb=1-7&_nc_sid=e3f864&_nc_ohc=qxca_q8VkX8AX8N89z8&_nc_ht=scontent.faep9-1.fna&oh=00_AT-QsNC3NFo0CKkHt7d4uTw1Ad-0bnYZWfzVffwNhYR-mA&oe=631F823E"
@@ -118,7 +114,7 @@
               placeholder="Funciones">
           </div>
 
-          <!-- Expericia Nº3 -->
+          <!-- Experiencia Nº3 -->
           <div class="card mt-2"></div>
           <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/KPMG.svg" style="float: left" id="logexpkpmg">
           <span>

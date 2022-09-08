@@ -10,8 +10,7 @@ import { TokenService } from 'src/app/services/token.service';
   styleUrls: ['./experiencia.component.css']
 })
 export class ExperienciaComponent implements OnInit {
-  
-  expe: Experiencia[] = [];
+  expe : Experiencia[] = [];
 
   experiencia1Array: Experiencia1[] = [
   {id:1, empresa: 'Cw Schelp S.A.C.I.', lugar: '"CABA. Argentina".', cargo: 'Especialista Contable/Administrativo.', fecha: 'Ago. 2018 - Actualidad (4 años 1 mes).',
@@ -61,8 +60,8 @@ delete(){
   }
 }
 
+constructor(private sExperiencia: SExperienciaService, private tokenService: TokenService) { }
 
-  constructor(private sExperiencia: SExperienciaService, private tokenService: TokenService) { }
   isLogged = false;
 
   ngOnInit(): void {
