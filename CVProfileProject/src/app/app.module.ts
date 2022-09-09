@@ -24,6 +24,7 @@ import { EditExperienciaComponent } from './components/experiencia/edit-experien
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +41,7 @@ import { EditExperienciaComponent } from './components/experiencia/edit-experien
     LoginComponent,
     NewExperienciaComponent,
     EditExperienciaComponent
+
   ],
   imports: [
     BrowserModule,
